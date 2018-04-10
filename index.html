@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>SheetToHtml</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="css/base.css" rel="stylesheet" >
+  <!-- IMPORTANT! essential libraries -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="js/sheetToHtml.js"></script>
+</head>
+
+<body>
+  <div>
+    <h1>今夜の献立</h1>
+    <!-- IMPORTANT! set sheet key of google spread sheet -->
+    <!-- IMPORTANT! do not change id -->
+    <div id="_key" hidden>1crL73sDk3bdOR0qeUCsjNy-4U5LS1eQUHPlAf-0_eSU</div>
+    <div>
+      <table>
+        <thead>
+          <td>コース</td>
+          <td>メニュー</td>
+          <td>材料</td>
+          <td>買うやつ</td>
+          <td>数</td>
+          <td>準備・メモ</td>
+        </thead>
+        <!-- IMPORTANT! do not change id -->
+        <tbody id="_result">
+        </tbody>
+      </table>
+    </div>
+
+    <!-- IMPORTANT! describe html inside container #_result -->
+    <!-- IMPORTANT! do not change id -->
+    <script type="text/template" id="_template">
+      <tr>
+        <td><%= course %></td>
+        <td><%= menu %></td>
+        <td><%= material %></td>
+        <td><%= buy %></td>
+        <td><%= qty %></td>
+        <td><%= prepare %></td>
+      </tr>
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+html {
+  font-size: 62.5%;
+}
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0mm 0mm !important;
+}
+
+table{
+  font-size: 3rem;
+}
+
+td{
+  padding: 8px;
+  line-height: 1.5;
+  vertical-align: top;
+  border: 3px solid #ddd !important;
+}
