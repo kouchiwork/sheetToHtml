@@ -62,6 +62,9 @@ function changeData(){
         arrayData.push([]);
         for(var col = 0; col <= maxCol; col++) {
             var val = sheetData[row][col];
+            if (typeof val === "undefined") {
+              val = "";
+            }
             arrayData[row-1][headers[col]]=val.trim();
         }
     }
