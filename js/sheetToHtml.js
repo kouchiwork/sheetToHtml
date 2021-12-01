@@ -32,7 +32,8 @@ window.onload = function () {
         cache: false,
         success: function (data) {
             // get data part only
-            sheetData = data.feed.entry;
+            //sheetData = data.feed.entry;
+            sheetData = data.values;
             // modify data
             changeData();
             // render to dom
