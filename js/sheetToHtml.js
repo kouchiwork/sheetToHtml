@@ -12,7 +12,8 @@ window.onload = function () {
 
     // create api's url with key
     var sheetKey = $(keyId).text();
-    var requestUrl = "https://spreadsheets.google.com/feeds/cells/" + sheetKey + "/od6/public/values?alt=json";
+    // var requestUrl = "https://spreadsheets.google.com/feeds/cells/" + sheetKey + "/od6/public/values?alt=json";
+    var requestUrl = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetKey + "?includeGridData=true";
 
     console.debug(sheetKey);
     console.debug(requestUrl);
