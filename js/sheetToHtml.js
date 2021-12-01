@@ -50,26 +50,19 @@ window.onload = function () {
 function changeData(){
 
     // define max row and max col
-    var maxRow = sheetData[sheetData.length-1].gs$cell.row;
-    var maxCol = 0;
-    var headers =[]
-    sheetData.some(function(item){
-        if (item.gs$cell.row == 2){
-            return true;
-        }
-        maxCol = item.gs$cell.col;
-        headers.push(item.gs$cell.$t);
-    })
+    var maxRow = sheetData.length-1;
+    var maxCol = sheetData[0].length-1;
+    var headers =sheetData[0]
 
     // then fill values by position of cells
     arrayData = [];
 
     // change data to hash
-    for(var row = 2; row <= maxRow; row++) {
+    for(var row = 1; row <= maxRow-1; row++) {
         arrayData.push([]);
-        for(var col = 1; col <= maxCol; col++) {
-            var val = getDataFromSheet(row,col);
-            arrayData[row-2][headers[col-1]]=val;
+        for(var col = 0; col <= maxCol-1; col++) {
+            var val = sheetData[row][col];
+            arrayData[row-2][headers[col-1]]=val.trim();
         }
     }
 }
