@@ -17,11 +17,6 @@ window.onload = function () {
     var apiKey = $(apiKeyId).text();
     var sheetName = $(sheetNameId).text();
     var requestUrl = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetKey + "/values/" + sheetName + "?key=" + apiKey;
-    // var requestUrl = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetKey + "?includeGridData=true";
-    // var requestUrl = "https://script.google.com/macros/s/" + sheetKey + "/exec";
-
-    console.debug(sheetKey);
-    console.debug(requestUrl);
 
     // get sheet data from SpreadSheet
     $.ajax({
@@ -94,16 +89,4 @@ function render() {
 
     });
 
-}
-
-// get values by position of cell
-function getDataFromSheet(row,col){
-    var val = sheetData.filter(function(item, index){
-        if (item.gs$cell.row == row && item.gs$cell.col == col) return true;
-    });
-    if (val[0]){
-        return val[0].gs$cell.$t.trim();
-    }else{
-        return ""
-    }
 }
