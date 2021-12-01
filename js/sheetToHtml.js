@@ -58,9 +58,9 @@ function changeData(){
     arrayData = [];
 
     // change data to hash
-    for(var row = 1; row <= maxRow-1; row++) {
+    for(var row = 1; row <= maxRow; row++) {
         arrayData.push([]);
-        for(var col = 0; col <= maxCol-1; col++) {
+        for(var col = 0; col <= maxCol; col++) {
             var val = sheetData[row][col];
             arrayData[row-1][headers[col]]=val.trim();
         }
