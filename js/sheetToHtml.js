@@ -62,7 +62,7 @@ function changeData(){
         arrayData.push([]);
         for(var col = 0; col <= maxCol-1; col++) {
             var val = sheetData[row][col];
-            arrayData[row-2][headers[col-1]]=val.trim();
+            arrayData[row-1][headers[col]]=val.trim();
         }
     }
 }
