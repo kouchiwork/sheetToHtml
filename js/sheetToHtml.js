@@ -5,6 +5,8 @@ var sheetData;
 var arrayData;
 // ids
 var keyId = "#_key"
+var apiKeyId = "#_apiKey"
+var sheetNameId = "#_sheetName";
 var templateId = "#_template"
 var destinationId = "#_result"
 
@@ -12,7 +14,11 @@ window.onload = function () {
 
     // create api's url with key
     var sheetKey = $(keyId).text();
-    var requestUrl = "https://spreadsheets.google.com/feeds/cells/" + sheetKey + "/od6/public/values?alt=json";
+    var apiKey = $(apiKeyId).text();
+    var sheetName = $(sheetNameId).text();
+    ｛スプレッドシートID｝/values/｛シート名｝?key=｛APIキー｝
+
+    var requestUrl = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetKey + "/values/" + sheetName + "?key=" + apiKey;
     // var requestUrl = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetKey + "?includeGridData=true";
     // var requestUrl = "https://script.google.com/macros/s/" + sheetKey + "/exec";
 
