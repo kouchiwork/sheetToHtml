@@ -24,6 +24,7 @@ window.onload = function () {
         type: 'GET',
         url: requestUrl,
         dataType: 'jsonp',
+        jsonpCallback: 'jsondata',
         cache: false,
         success: function (data) {
             // get data part only
