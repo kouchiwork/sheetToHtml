@@ -16,8 +16,6 @@ window.onload = function () {
     var sheetKey = $(keyId).text();
     var apiKey = $(apiKeyId).text();
     var sheetName = $(sheetNameId).text();
-    ｛スプレッドシートID｝/values/｛シート名｝?key=｛APIキー｝
-
     var requestUrl = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetKey + "/values/" + sheetName + "?key=" + apiKey;
     // var requestUrl = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetKey + "?includeGridData=true";
     // var requestUrl = "https://script.google.com/macros/s/" + sheetKey + "/exec";
